@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
   end
 
   def search_result
-  	@products  = Product.get_result_set(params[:product_id]).sort!
+  	if params[:search_text].present?
+  	  @products  = Product.get_result_set(params[:search_text]).sort!
+    else
+  	  @products = []
+    end
   end
 
   def show
