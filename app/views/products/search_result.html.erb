@@ -1,5 +1,9 @@
-<h1>Search Result Page </h1>
-<% @products.each do |product|%>
-	<%= link_to product.product_id, show_product_path(product.id) %>
-	<br/>
+<% if @products.size > 0 %>
+	<h1>Search Result Page </h1>
+	<% @products.each do |product|%>
+		<%= link_to product.product_id, show_product_path(product.id) %>
+		<br/>
+	<% end %>
+<% else %>
+	<b> No results found </b>
 <% end %>

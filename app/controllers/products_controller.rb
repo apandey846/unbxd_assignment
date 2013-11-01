@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def search_result
-  	@products  = Product.get_result_set(params[:product_id])
+  	@products  = Product.get_result_set(params[:product_id]).sort!
   end
 
   def show
