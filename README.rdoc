@@ -2,17 +2,21 @@
 
 Basic requirement to run this application is install Rails & Ruby into your system. Try this http://ryanbigg.com/2010/12/ubuntu-ruby-rvm-rails-and-you/ for complete installation of RoR on linux environment.
 
+Install mysql for database setup, use following command to install:
+=======sudo apt-get install mysql-server
+
+
 
 Use git clone command to clone the repository into you local system using following command:
 
-git clone https://github.com/apandey846/unbxd_assignment.git
+=======git clone https://github.com/apandey846/unbxd_assignment.git
 
 Run install gem command:
-bundle install
+=======bundle install
 
 To setup the whole setup database tables and inserting data into the table, please run the following script :
 
-sh script/setup_script.sh
+=======sh script/setup_script.sh
 
 Output of the above script will be like this:
 
@@ -36,5 +40,4 @@ Executing $ RAILS_ENV=development bundle exec rake unbxd_assignment_tasks:import
 
 
 To start the application into your local(using webrick server) run following command:
-
-rails s
+=======rails s
