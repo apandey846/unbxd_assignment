@@ -1,0 +1,18 @@
+<h1>Product Details</h1>
+<b>Group Id - </b><span><%= @product.group_id%></span><br/>
+<b>Product Id - </b><span><%= @product.product_id %></span><br/>
+<b>Movie Title - </b><span><%= @product.movieTile %></span><br/>
+<b>Store - </b><span><%= @product.store %></span><br/>
+<b>Category - </b><span><%= @product.category %></span><br/>
+<b>Sub-Category - </b><span><%= @product.sub_category %></span><br/>
+<b>Price - </b><span><%= @product.price %></span><br/>
+<b>Shipping Duration - </b><span><%= @product.shipping_duration %></span>
+
+<h2><%= @similar_products.size > 1 ? 'List of Products of same version' : 'No Similar product found' %></h2>
+<% if @similar_products.size > 1 %>
+	<% @similar_products.each do |product|%>
+		<%= link_to product.product_id, show_product_path(product.id) %>
+		<br/>
+	<% end %>
+<% end %>
+
