@@ -1,6 +1,6 @@
 require 'csv'
 namespace :unbxd_assignment_tasks do
-    desc "Import gac from csv file"
+    desc "Import data from csv file"
     task :import_csv_into_db => :environment do
 
       file = "movies-catalog.csv"
